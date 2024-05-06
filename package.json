@@ -1,0 +1,26 @@
+{
+  "name": "twitter-backend",
+  "version": "1.0.0",
+  "description": "Cette aplication est un backend du projet Kadea-twiter",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "node scr/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/land-bit/twitter-backend.git"
+  },
+  "author": "Landry Bitege",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/land-bit/twitter-backend/issues"
+  },
+  "homepage": "https://github.com/land-bit/twitter-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
