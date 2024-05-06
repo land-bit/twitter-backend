@@ -15,17 +15,17 @@ export const createTweet = (req, res, next) => {
 };
 
 export const updateTweets = (req, res, next) => {
-  res.status(100).json({ message: "Tweets route : create tweets" });
+  res.send({ message: "Tweets route : create tweets" });
 };
 
 export const updateTweet = (req, res, next) => {
-  res.status(100).json({ message: "Tweets route : create tweet" });
+  res.send({ message: "Tweets route : create tweet" });
 };
 
 export const deleteTweets = (req, res, next) => {
-  res.status(100).json({ message: "Tweets route : create tweets" });
+  res.send({ message: "Tweets route : create tweets" });
 };
 
 export const deleteTweet = (req, res, next) => {
-  res.status(100).json({ message: "Tweets route : create tweet" });
+  res.send({ message: "Tweets route : create tweet" });
 };
