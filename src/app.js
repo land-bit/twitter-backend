@@ -2,12 +2,17 @@ import express from "express";
 import dotenv from "dotenv";
 import { tweetsRoute } from "./routes/tweets.js";
 import { usersRoute } from "./routes/users.js";
+import { userRoute } from "./routes/user.js";
 
 dotenv.config();
 
 const app = express();
 
 const { PORT } = process.env;
+
+app.use(express.json());
+
+app.use("/user", userRoute);
 
 app.use("/users", usersRoute);
 
