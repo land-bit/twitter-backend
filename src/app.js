@@ -9,17 +9,17 @@ dotenv.config();
 
 const app = express();
 
+const port = process.env.PORT || 3001;
+
+app.use(express.json());
+
 app.use(
   cors({
-    origin: ["http://localhost:5173/", "https://kadea-twitter.vercel.app/"],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["content-type", "Authorization"],
   })
 );
-
-const port = process.env.PORT || 3001;
-
-app.use(express.json());
 
 app.use("/user", userRoute);
 
