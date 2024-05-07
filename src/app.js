@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import { tweetsRoute } from "./routes/tweets.js";
 import { usersRoute } from "./routes/users.js";
 import { userRoute } from "./routes/user.js";
@@ -7,6 +8,14 @@ import { userRoute } from "./routes/user.js";
 dotenv.config();
 
 const app = express();
+
+app.use(
+  cors({
+    origin: ["http://localhost:5173/", "https://kadea-twitter.vercel.app/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["content-type", "Authorization"],
+  })
+);
 
 const port = process.env.PORT || 3001;
 
