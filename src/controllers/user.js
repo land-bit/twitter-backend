@@ -7,6 +7,6 @@ export const getUser = (req, res) => {
     if (!currentUser) throw new Error("No current user");
     res.status(200).json(currentUser);
   } catch (error) {
-    res.status(400).Error(error.message);
+    res.status(404).Error(error.message);
   }
 };

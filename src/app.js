@@ -20,7 +20,8 @@ app.use("/tweets", tweetsRoute);
 
 app.use("/", (req, res, next) =>
   res.send(
-    "Bienvenue sur notre application backend d'un exercice de clone de twitter"
+    "Bienvenue sur notre application backend d'un exercice de clone de twitter !\n\n\n" +
+      "Veuiller utiliser une route valide"
   )
 );
 
